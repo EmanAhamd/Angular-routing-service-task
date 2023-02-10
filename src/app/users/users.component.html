@@ -1,0 +1,19 @@
+<div class="mt-5">
+    <h2>All Users</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td><a [routerLink]="['/users', user.id]">{{user.email}}</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
